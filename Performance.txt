@@ -1,4 +1,4 @@
-Using a Decision Tree (tree.DecisionTreeClassifier) with the default parameters.
+#Using a Decision Tree (tree.DecisionTreeClassifier) with the default parameters.
 For emotions : 
                 precision    recall  f1-score   support
     admiration       0.42      0.58      0.49      2076
@@ -103,3 +103,5 @@ Confusion Matrix:
  [ 927 4616 1486  754]
  [1643 2519 5211 1668]
  [ 894 1315 2570 6915]]
+ 
+ 
