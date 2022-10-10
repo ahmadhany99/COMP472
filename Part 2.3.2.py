@@ -6,7 +6,6 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.preprocessing import OneHotEncoder
-import pickle
 from sklearn.metrics import classification_report, confusion_matrix
 
 f = open('goemotions.json')
