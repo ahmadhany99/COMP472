@@ -220,300 +220,143 @@ Confusion Matrix:
  [1643 2519 5211 1668]
  [ 894 1315 2570 6915]]
  
- Using a better performing Decision Tree found using GridSearchCV. 
+Using a better performing Decision Tree found using GridSearchCV. 
 For emotions : 
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
                 precision    recall  f1-score   support
-    admiration       0.38      0.23      0.29      2097
-     amusement       0.58      0.34      0.43      1259
-         anger       0.00      0.00      0.00      1032
-     annoyance       0.00      0.00      0.00      1652
-      approval       1.00      0.00      0.00      2232
-        caring       0.12      0.00      0.01       691
-     confusion       0.17      0.00      0.00      1008
-     curiosity       0.18      0.00      0.00      1153
-        desire       0.43      0.23      0.30       402
-disappointment       0.00      0.00      0.00       956
-   disapproval       0.00      0.00      0.00      1539
-       disgust       1.00      0.00      0.00       596
- embarrassment       1.00      0.00      0.00       293
-    excitement       0.15      0.01      0.02       597
-          fear       1.00      0.00      0.00       365
-     gratitude       0.87      0.72      0.79      1424
-         grief       1.00      0.00      0.00        65
-           joy       0.39      0.22      0.28       923
-          love       0.58      0.61      0.60       984
-   nervousness       1.00      0.00      0.00       161
-       neutral       0.36      0.93      0.52     11012
-      optimism       0.47      0.25      0.33       905
-         pride       1.00      0.00      0.00       145
-   realization       1.00      0.00      0.00       944
-        relief       0.50      0.01      0.02       175
-       remorse       0.36      0.50      0.42       282
-       sadness       0.31      0.01      0.01       776
-      surprise       0.20      0.00      0.00       696
+    admiration       0.36      0.21      0.27      2105
+     amusement       0.56      0.34      0.42      1220
+         anger       0.50      0.00      0.00      1105
+     annoyance       0.08      0.00      0.00      1669
+      approval       0.12      0.00      0.00      2285
+        caring       0.25      0.00      0.01       668
+     confusion       0.00      0.00      0.00       995
+     curiosity       0.00      0.00      0.00      1207
+        desire       0.39      0.20      0.26       433
+disappointment       0.00      0.00      0.00       932
+   disapproval       0.00      0.00      0.00      1465
+       disgust       0.00      0.00      0.00       613
+ embarrassment       0.00      0.00      0.00       285
+    excitement       0.19      0.01      0.03       616
+          fear       0.00      0.00      0.00       337
+     gratitude       0.88      0.71      0.79      1446
+         grief       0.00      0.00      0.00        61
+           joy       0.36      0.21      0.26       836
+          love       0.58      0.58      0.58       984
+   nervousness       0.00      0.00      0.00       163
+       neutral       0.36      0.93      0.52     11102
+      optimism       0.47      0.28      0.35       827
+         pride       0.00      0.00      0.00       145
+   realization       0.00      0.00      0.00       957
+        relief       0.00      0.00      0.00       148
+       remorse       0.41      0.52      0.46       301
+       sadness       0.42      0.01      0.01       779
+      surprise       0.00      0.00      0.00       680
       accuracy                           0.39     34364
-     macro avg       0.50      0.15      0.14     34364
-  weighted avg       0.41      0.39      0.27     34364
+     macro avg       0.21      0.14      0.14     34364
+  weighted avg       0.29      0.39      0.27     34364
 Confusion Matrix: 
- [[  487    10     0     0     0     0     0     0     5     0     0     0
-      0     4     0    16     0    29    71     0  1456    18     0     0
-      0     1     0     0]
- [   31   427     0     0     0     0     1     0     2     0     0     0
-      0     0     0     8     0     8     5     0   773     2     0     0
+ [[  446    11     0     0     1     0     0     0     7     0     0     0
+      0     1     0    12     0    35    75     0  1490    23     0     0
+      0     3     1     0]
+ [   22   414     0     2     1     0     0     0     2     0     0     0
+      0     2     0     3     0     7     6     0   748     9     0     0
+      0     4     0     0]
+ [   20     8     1     0     0     0     0     0     1     0     0     0
+      0     0     0     4     0     5    11     0  1048     3     0     0
+      0     4     0     0]
+ [   21    32     0     1     0     0     0     0     5     0     0     0
+      0     0     0    12     0     9    14     0  1563     8     0     0
+      0     4     0     0]
+ [   94    11     0     0     1     0     0     0     9     0     1     0
+      0     0     0     9     0    20    26     0  2089    18     0     0
+      0     7     0     0]
+ [   23     4     0     0     0     2     0     0     6     0     0     0
+      0     0     0     6     0    14    17     0   548    32     0     0
+      0    15     1     0]
+ [   11    12     1     0     0     0     0     0     0     0     1     0
+      0     0     0     2     0     8     4     0   953     1     0     0
       0     2     0     0]
- [    8     6     0     0     0     0     0     0     1     0     0     0
-      0     0     0     5     0     4     8     0   990     4     0     0
-      0     6     0     0]
- [   30    21     0     0     0     0     0     1     3     0     0     0
-      0     0     0     9     0     5    13     0  1557     5     0     0
+ [   18     9     0     0     1     0     0     0     3     0     0     0
+      0     0     0     5     0     4    11     0  1144     4     0     0
       0     8     0     0]
- [  101    14     0     0     0     1     0     0     9     1     0     0
-      0     0     0     7     0    15    31     0  2025    24     0     0
-      0     4     0     0]
- [   22     4     0     0     0     2     0     0     5     0     0     0
-      0     0     0     3     0    15     9     0   577    35     0     0
-      0    18     1     0]
- [   14    10     0     0     0     0     1     1     1     0     0     0
-      0     0     0     1     0     4    12     0   960     2     0     0
-      0     2     0     0]
- [   22     8     0     0     0     0     0     2     1     0     0     0
-      0     0     0     5     0     8     7     0  1095     3     0     0
-      0     2     0     0]
- [    9     4     0     0     0     0     0     1    91     0     0     0
-      0     0     0     2     0     5    10     0   260    19     0     0
-      0     1     0     0]
- [   33     8     0     0     0     0     0     0     5     0     0     0
-      0     0     0     2     0     3     6     0   875     8     0     0
-      0    16     0     0]
- [   32    16     0     0     0     1     0     1     5     0     0     0
-      0     0     0     8     0    11    12     0  1432     9     0     0
-      0    12     0     0]
- [    7     8     0     0     0     0     0     0     3     0     0     0
-      0     0     0     1     0     3     2     0   563     5     0     0
-      0     4     0     0]
- [    4     5     0     0     0     0     0     0     0     0     0     0
-      0     0     0     2     0     0     0     0   270     1     0     0
-      0    11     0     0]
- [   22     5     0     0     0     0     0     0     3     0     0     0
-      0     6     0     1     0    30    17     0   506     5     0     0
-      0     0     0     2]
- [    1     8     0     0     0     0     0     0     0     0     0     0
-      0     0     0     0     0     0     2     0   352     0     0     0
-      0     2     0     0]
- [   60     3     1     2     0     3     0     0     5     0     1     0
-      0     3     0  1022     0    44     7     0   220    25     0     0
-      2    25     1     0]
- [    2     0     0     0     0     0     0     0     0     0     0     0
-      0     0     0     0     0     0     1     0    58     0     0     0
-      0     4     0     0]
- [   57    29     0     1     0     0     0     0     4     1     0     0
-      0    16     0     6     0   203    56     0   540     8     0     0
-      0     2     0     0]
- [    8    17     0     0     0     1     2     2     3     0     0     0
-      0     3     0     5     0     6   605     0   327     5     0     0
-      0     0     0     0]
- [    1     0     0     0     0     0     0     0     0     0     0     0
-      0     0     0     2     0     0     1     0   155     1     0     0
-      0     1     0     0]
- [  222   114     1     0     0     4     1     0    32     0     0     0
-      0     5     0    49     0    71   130     0 10285    56     0     0
-      0    39     1     2]
- [   43     6     0     0     0     3     1     0    23     1     0     0
-      0     2     0     2     0    16    16     0   561   228     0     0
-      0     3     0     0]
- [   15     0     0     0     0     0     0     0     0     0     0     0
-      0     0     0     0     0    12     0     0   117     1     0     0
-      0     0     0     0]
- [   16     8     0     0     0     0     0     0     4     0     0     0
-      0     0     0     4     0     3     6     0   893     5     0     0
-      0     4     1     0]
- [   14     0     0     0     0     0     0     0     0     0     0     0
-      0     0     0    12     0    20     0     0   125     2     0     0
-      2     0     0     0]
- [    1     0     1     0     0     1     0     2     1     0     0     0
-      0     0     0     0     0     1     2     0   127     0     0     0
-      0   141     5     0]
- [   15     5     0     0     0     1     0     1     6     0     0     0
-      0     0     0     0     0     2     5     0   651     7     0     0
-      0    79     4     0]
- [    7     3     0     0     0     0     0     0     1     0     0     0
-      0     2     0     2     0     2     6     0   668     4     0     0
-      0     0     0     1]]
-For sentiments : 
-              precision    recall  f1-score   support
-   ambiguous       0.57      0.01      0.01      3757
-    negative       0.63      0.05      0.08      7667
-     neutral       0.37      0.94      0.53     11136
-    positive       0.78      0.34      0.48     11804
-    accuracy                           0.43     34364
-   macro avg       0.59      0.33      0.28     34364
-weighted avg       0.59      0.43      0.35     34364
-Confusion Matrix: 
- [[   28    27  3539   163]
- [    4   349  6972   342]
- [    6    67 10460   603]
- [   11   114  7653  4026]]
- 
- 
- Using a better performing Decision Tree found using GridSearchCV. 
-For emotions : 
-C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-                precision    recall  f1-score   support
-    admiration       0.37      0.23      0.28      2059
-     amusement       0.60      0.36      0.45      1250
-         anger       0.00      0.00      0.00      1067
-     annoyance       0.25      0.00      0.00      1716
-      approval       0.00      0.00      0.00      2168
-        caring       0.08      0.00      0.00       714
-     confusion       0.33      0.00      0.00       930
-     curiosity       0.14      0.00      0.00      1161
-        desire       0.46      0.23      0.31       442
-disappointment       0.00      0.00      0.00       972
-   disapproval       0.20      0.00      0.00      1541
-       disgust       0.00      0.00      0.00       536
- embarrassment       0.00      0.00      0.00       286
-    excitement       0.00      0.00      0.00       611
-          fear       0.00      0.00      0.00       360
-     gratitude       0.88      0.73      0.80      1399
-         grief       0.00      0.00      0.00        70
-           joy       0.33      0.20      0.25       830
-          love       0.58      0.57      0.58      1049
-   nervousness       0.00      0.00      0.00       134
-       neutral       0.37      0.93      0.53     11185
-      optimism       0.49      0.26      0.34       894
-         pride       0.00      0.00      0.00       155
-   realization       0.00      0.00      0.00       908
-        relief       0.25      0.02      0.03       160
-       remorse       0.41      0.54      0.47       302
-       sadness       0.40      0.00      0.01       777
-      surprise       0.00      0.00      0.00       688
-      accuracy                           0.40     34364
-     macro avg       0.22      0.15      0.14     34364
-  weighted avg       0.29      0.40      0.28     34364
-Confusion Matrix: 
- [[  464    13     0     1     0     1     0     1     8     0     0     0
-      0     0     0     5     0    41    71     0  1434    19     0     0
-      0     1     0     0]
- [   30   445     0     0     0     0     2     0     1     0     0     1
-      0     0     0     5     0     3    11     0   744     6     0     0
-      0     2     0     0]
- [   13     5     0     0     0     0     0     0     1     0     0     0
-      0     0     0     3     0     5    11     0  1023     2     0     0
-      0     4     0     0]
- [   26    17     0     1     0     0     0     0     4     1     0     1
-      0     0     0    12     0     8    18     0  1615     5     0     0
-      0     8     0     0]
- [   88    19     0     0     0     1     0     1     5     0     0     0
-      0     0     0     7     0    17    24     0  1982    18     0     0
-      1     5     0     0]
- [   27     5     0     0     0     1     0     0     6     0     0     0
-      0     0     0     5     0    18    15     0   592    29     0     0
-      0    16     0     0]
- [    9     7     1     0     0     0     2     1     1     1     0     0
-      0     0     0     3     0     4     8     0   890     2     0     0
-      0     1     0     0]
- [   16     5     0     0     0     0     0     1     3     0     1     0
-      0     0     0     6     0     5     9     0  1112     1     0     0
-      0     2     0     0]
- [   17     3     0     0     0     0     0     0   101     0     0     0
-      0     0     0     3     0     3     8     0   285    22     0     0
-      0     0     0     0]
- [   24     9     0     0     0     1     0     0     6     0     0     0
-      0     0     0     4     0     6     5     0   901     7     0     0
+ [    5     4     0     0     0     0     0     0    85     1     0     0
+      0     0     0     1     0     1    14     0   295    26     0     0
+      1     0     0     0]
+ [   29     5     0     2     0     0     0     0     5     0     0     0
+      0     0     0     3     0     4     8     0   858     9     0     0
       0     9     0     0]
- [   23    22     0     1     0     0     0     0     3     0     2     0
-      0     0     0     6     0     3     9     0  1448    11     0     0
-      0    13     0     0]
- [    4     2     0     0     0     0     0     0     2     0     0     0
-      0     0     0     3     0     2     3     0   516     3     0     0
-      0     1     0     0]
- [    7     3     0     0     0     0     0     0     1     0     0     0
-      0     0     0     1     0     0     2     0   267     0     0     0
-      0     5     0     0]
- [   25     9     0     0     0     0     0     0     3     0     0     0
-      0     0     0     2     0    43    10     0   516     3     0     0
-      0     0     0     0]
- [    4     5     0     0     0     0     0     0     0     0     1     0
-      0     0     0     1     0     1     4     0   343     1     0     0
-      0     0     0     0]
- [   48     3     0     0     1     1     0     0     3     1     0     0
-      0     0     0  1026     0    46    16     0   191    25     0     0
-      5    32     1     0]
- [    2     0     0     0     0     0     0     0     0     0     0     0
-      0     0     0     1     0     0     0     0    62     0     0     0
-      0     5     0     0]
- [   54    22     0     0     0     0     0     0     5     0     0     0
-      0     0     0     3     0   165    40     0   531     7     0     0
-      1     2     0     0]
- [   25    14     0     0     1     0     0     2     3     0     5     0
-      0     2     0     7     0     8   596     0   380     6     0     0
-      0     0     0     0]
- [    1     0     0     0     0     0     0     0     0     0     0     0
-      0     0     0     1     0     1     1     0   129     0     0     0
-      0     1     0     0]
- [  236   105     0     1     0     2     1     0    40     2     1     1
-      0     1     0    46     0    65   136     0 10447    64     0     0
-      2    35     0     0]
- [   38     7     0     0     0     3     0     0    17     1     0     0
-      0     0     0     4     0    17     7     0   561   236     0     0
-      0     2     1     0]
- [   13     0     0     0     0     0     0     0     0     0     0     0
-      0     0     0     0     0     7     0     0   133     2     0     0
-      0     0     0     0]
- [   24     7     0     0     0     1     0     0     2     0     0     0
-      0     0     0     2     0     7     9     0   842     6     0     0
+ [   34    11     0     0     0     0     0     0     5     0     0     0
+      0     0     0     5     0     3    10     0  1382     7     0     0
       0     8     0     0]
- [   10     2     0     0     0     0     0     1     1     0     0     0
-      0     0     0     4     0    20     0     0   118     1     0     0
-      3     0     0     0]
- [    1     3     0     0     0     0     1     0     1     1     0     0
-      0     0     0     0     0     0     1     0   130     0     0     0
-      0   163     1     0]
- [   13     3     1     0     0     2     0     0     1     1     0     0
-      0     0     0     0     0     6     5     0   654     8     0     0
-      0    81     2     0]
- [    8     4     0     0     0     0     0     0     0     1     0     0
-      0     0     0     2     0     5     3     0   664     1     0     0
-      0     0     0     0]]
-C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\model_selection\_validation.py:378: FitFailedWarning: 
-1 fits failed out of a total of 30.
-The score on these train-test partitions for these parameters will be set to nan.
-If these failures are not expected, you can try to debug them by setting error_score='raise'.
-Below are more details about the failures:
---------------------------------------------------------------------------------
-1 fits failed with the following error:
-Traceback (most recent call last):
-  File "C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\model_selection\_validation.py", line 686, in _fit_and_score
-    estimator.fit(X_train, y_train, **fit_params)
-  File "C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\tree\_classes.py", line 969, in fit
-    super().fit(
-  File "C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\tree\_classes.py", line 221, in fit
-    classes_k, y_encoded[:, k] = np.unique(y[:, k], return_inverse=True)
-  File "<__array_function__ internals>", line 180, in unique
-  File "C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\numpy\lib\arraysetops.py", line 274, in unique
-    ret = _unique1d(ar, return_index, return_inverse, return_counts,
-  File "C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\numpy\lib\arraysetops.py", line 334, in _unique1d
-    aux = ar[perm]
-numpy.core._exceptions._ArrayMemoryError: Unable to allocate 295. MiB for an array with shape (109965,) and data type <U703
-  warnings.warn(some_fits_failed_message, FitFailedWarning)
-C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\model_selection\_search.py:953: UserWarning: One or more of the test scores are non-finite: [0.35877664 0.35877664        nan 0.42920646 0.42941743 0.42933014]
-  warnings.warn(
+ [    3     3     0     0     0     0     0     0     1     0     0     0
+      0     0     0     1     0     2     6     0   586     5     0     0
+      0     6     0     0]
+ [    3     4     0     0     0     0     0     0     0     0     0     0
+      0     0     0     1     0     1     0     0   267     0     0     0
+      0     9     0     0]
+ [   24    11     0     0     1     0     0     0     3     0     0     0
+      0     9     0     3     0    33    12     0   516     4     0     0
+      0     0     0     0]
+ [    3     5     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     1     4     0   323     1     0     0
+      0     0     0     0]
+ [   59     7     0     2     0     0     0     0     3     0     2     0
+      0     5     0  1030     0    44     7     0   232    25     0     0
+      0    29     1     0]
+ [    1     0     0     0     0     1     0     0     1     0     0     0
+      0     0     0     0     0     1     0     0    52     0     0     0
+      0     5     0     0]
+ [   47    30     0     0     0     0     0     0     3     0     0     0
+      0    21     0     7     0   173    42     0   503     9     0     0
+      0     1     0     0]
+ [   14    10     0     1     0     0     3     0     1     2     1     0
+      0     1     0     3     0     9   569     0   368     2     0     0
+      0     0     0     0]
+ [    1     0     0     0     1     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0   159     1     0     0
+      0     1     0     0]
+ [  233   124     0     3     1     0     0     0    41     3     1     0
+      0     6     0    54     0    60   122     0 10360    57     0     0
+      0    37     0     0]
+ [   46     5     0     0     0     0     0     0    24     0     0     0
+      0     0     0     3     0    11     5     0   498   232     0     0
+      0     3     0     0]
+ [   12     2     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     9     0     0   121     1     0     0
+      0     0     0     0]
+ [   20     8     0     0     0     1     1     0     2     0     0     0
+      0     0     0     3     0     3    10     0   899     4     0     0
+      0     6     0     0]
+ [   13     2     0     0     0     0     0     0     0     0     0     0
+      0     0     0     9     0    12     0     0   112     0     0     0
+      0     0     0     0]
+ [    2     1     0     1     0     3     0     0     3     0     0     0
+      0     0     0     0     0     0     3     0   126     1     0     0
+      0   157     4     0]
+ [   14     5     0     0     1     1     0     0     6     0     0     0
+      0     0     0     0     0     7     6     0   663     6     0     0
+      0    65     5     0]
+ [   10     5     0     0     0     0     0     0     3     0     0     0
+      0     3     0     1     0     5     2     0   648     1     0     0
+      0     2     0     0]]
 For sentiments : 
               precision    recall  f1-score   support
-   ambiguous       0.78      0.01      0.01      3846
-    negative       0.66      0.05      0.09      7673
-     neutral       0.36      0.93      0.52     11123
-    positive       0.76      0.34      0.47     11722
+   ambiguous       0.44      0.00      0.01      3827
+    negative       0.66      0.05      0.09      7653
+     neutral       0.36      0.93      0.52     11130
+    positive       0.77      0.34      0.47     11754
     accuracy                           0.43     34364
-   macro avg       0.64      0.33      0.27     34364
-weighted avg       0.61      0.43      0.35     34364
+   macro avg       0.56      0.33      0.27     34364
+weighted avg       0.58      0.43      0.35     34364
 Confusion Matrix: 
- [[   28    20  3657   141]
- [    2   354  6921   396]
- [    3    67 10345   708]
- [    3    98  7588  4033]]
+ [[   19    23  3641   144]
+ [    6   371  6930   346]
+ [   12    61 10381   676]
+ [    6   109  7624  4015]]
+
