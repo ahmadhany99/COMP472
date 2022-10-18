@@ -24,7 +24,7 @@ grid=GridSearchCV(estimator=dtc,param_grid=param_dict,n_jobs=-1,error_score='rai
 grid.fit(x1_train, y1_train)
 y1_pred = grid.predict(x1_test)
 print("For emotions : \n")
-print(classification_report(y1_test, y1_pred,zero_division=1))
+print(classification_report(y1_test, y1_pred))
 print("Confusion Matrix: \n", confusion_matrix(y1_test, y1_pred))
 x2_train = vec.fit_transform(x2_train)
 x2_test = vec.transform(x2_test)
@@ -33,7 +33,7 @@ grid1=GridSearchCV(estimator=dtc1,param_grid=param_dict,n_jobs=-1,error_score='r
 grid1.fit(x2_train, y2_train)
 y2_pred = grid1.predict(x2_test)
 print("For sentiments : \n")
-print(classification_report(y2_test, y2_pred, zero_division=1))
+print(classification_report(y2_test, y2_pred))
 print("Confusion Matrix: \n", confusion_matrix(y2_test, y2_pred))
 f.close()
 
