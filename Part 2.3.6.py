@@ -32,14 +32,14 @@ vec=CountVectorizer()
 x1_train = vec.fit_transform(x1_train)
 x1_test = vec.transform(x1_test)
 
-mlp = MLPClassifier(max_iter=250)
+mlp = MLPClassifier(max_iter=1)
 
 parameters= {
     'hidden_layer_sizes': [(2,30, 50)],
-    'activation': ['sigmoid', 'tanh', 'relu', 'identity'],
+    'activation': ['logistic', 'tanh', 'relu', 'identity'],
     'solver': ['adam', 'sgd'],
     }
-clf = GridSearchCV(mlp, parameters)
+clf = GridSearchCV(estimator = mlp, param_grid=parameters, n_jobs=-1,error_score='raise')
 
 
 clf.fit(x1_train, y1_train)
