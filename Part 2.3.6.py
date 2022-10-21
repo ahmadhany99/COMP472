@@ -40,9 +40,12 @@ parameters= {
     'solver': ['adam', 'sgd'],
     }
 clf = GridSearchCV(estimator = mlp, param_grid=parameters, n_jobs=-1,error_score='raise')
+sc = StandardScaler(with_mean=False)
+scaler = sc.fit(x1_train)
+x1_train_scaled = scaler.transform(x1_train)
 
 
-clf.fit(x1_train, y1_train)
+clf.fit(x1_train_scaled, y1_train)
 y_pred= clf.predict(x1_test)
 print('accuracy: {:.2f}'.format(accuracy_score(y1_test, y_pred)))
 
