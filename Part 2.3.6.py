@@ -24,6 +24,7 @@ y2 = split[:, 2]
 
 # Part 2.2
 x1_train, x1_test, y1_train, y1_test = train_test_split(x, y1, train_size=0.8, test_size=0.2)
+x2_train, x2_test, y2_train, y2_test = train_test_split(x, y2, train_size=0.8, test_size=0.2)
 
 #PART 2.3.6 MLP
 vec=CountVectorizer()
@@ -35,17 +36,26 @@ x1_test = vec.transform(x1_test)
 mlp = MLPClassifier(max_iter=1)
 
 parameters= {
-    'hidden_layer_sizes': [(2,30, 50)],
+    'hidden_layer_sizes': [(2,), (10,10,10)],
     'activation': ['logistic', 'tanh', 'relu', 'identity'],
     'solver': ['adam', 'sgd'],
     }
 clf = GridSearchCV(estimator = mlp, param_grid=parameters, n_jobs=-1,error_score='raise')
-sc = StandardScaler(with_mean=False)
-scaler = sc.fit(x1_train)
-x1_train_scaled = scaler.transform(x1_train)
 
-
-clf.fit(x1_train_scaled, y1_train)
-y_pred= clf.predict(x1_test)
-print('accuracy: {:.2f}'.format(accuracy_score(y1_test, y_pred)))
+clf.fit(x1_train, y1_train)
+y1_pred= clf.predict(x1_test) 
+print('accuracy: {:.2f}'.format(accuracy_score(y1_test, y1_pred)))
+print("For emotions : \n")
+print(classification_report(y1_test, y1_pred,zero_division=1))
+print("Confusion Matrix: \n", confusion_matrix(y1_test, y1_pred))
+x2_train = vec.fit_transform(x2_train)
+x2_test = vec.transform(x2_test)
+dtc1 = DecisionTreeClassifier()
+grid1=GridSearchCV(estimator=dtc1,param_grid=parameters,n_jobs=-1,error_score='raise')
+grid1.fit(x2_train, y2_train)
+y2_pred = grid1.predict(x2_test)
+print("For sentiments : \n")
+print(classification_report(y2_test, y2_pred, zero_division=1))
+print("Confusion Matrix: \n", confusion_matrix(y2_test, y2_pred))
+f.close()
 

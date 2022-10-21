@@ -28,7 +28,7 @@ y1 = split[:, 1]
 y2 = split[:, 2]
 # Part 2.2
 x1_train, x1_test, y1_train, y1_test = train_test_split(x, y1, train_size=0.8, test_size=0.2)
-#x2_train, x2_test, y2_train, y2_test = train_test_split(x, y2, train_size=0.8, test_size=0.2)
+x2_train, x2_test, y2_train, y2_test = train_test_split(x, y2, train_size=0.8, test_size=0.2)
 #PART 2.3.3 MLP
 
 
@@ -37,6 +37,16 @@ x1_test = vec.transform(x1_test)
 
 mlp_clf = MLPClassifier(max_iter=1)
 mlp_clf.fit(x1_train, y1_train)
-y_pred= mlp_clf.predict(x1_test)
-print('accuracy: {:.2f}'.format(accuracy_score(y1_test, y_pred)))
-
+y1_pred = mlp_clf.predict(x1_test)
+print("For emotions : \n")
+print(classification_report(y1_test, y1_pred))
+print("Confusion Matrix: \n", confusion_matrix(y1_test, y1_pred))
+x2_train = vec.fit_transform(x2_train)
+x2_test = vec.transform(x2_test)
+mlp2 = MLPClassifier(max_iter=1)
+mlp2.fit(x2_train, y2_train)
+y2_pred = mlp2.predict(x2_test)
+print("For sentiments : \n")
+print(classification_report(y2_test, y2_pred))
+print("Confusion Matrix: \n", confusion_matrix(y2_test, y2_pred))
+f.close()
