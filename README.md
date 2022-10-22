@@ -1,8 +1,16 @@
 # COMP472
 Emotion and Sentiment Classification of Reddit Posts
 
-- Make sure you have python 3.8 and download the these packages: scikit-learn, gensim, nltk libraries, numpy, and pandas.
+|      Name      |  Student ID |
+| -------------  | ------------- |
+|   Ahmad Hany   | 40068060 |
+|Ibrahim Tawakool| 40108389  |
+|  Mohona Mazumdar | 40129421 |
 
-- To run the the .py files, first add the files in your IDE. Then run it on an anaconda environment make sure that you download the goemotions.json in the same project directory so it can access the file. 
+# SetUp
 
-- Run each file alone since because the dataset is large. You will notice that some models will take time so thats fine and there will be warnings that will be explained in the analysis
+- Make sure you have python 3.8 and the following packages installed: scikit-learn, gensim, nltk libraries, numpy, and pandas.
+
+- To run the the .py files, first add the files in your IDE. Then run it on an anaconda environment. Make sure that you download the goemotions.json in the same project directory so it can access the file. 
+
+- Run each file alone since the dataset is large. You will notice that some models will take time which is normal and there will be warnings that will be explained in the analysis
