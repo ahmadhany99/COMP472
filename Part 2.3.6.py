@@ -32,8 +32,15 @@ vec=CountVectorizer()
 
 x1_train = vec.fit_transform(x1_train)
 x1_test = vec.transform(x1_test)
+#y1_train = vec.transform(y1_train)
+y1_test = vec.transform(y1_test)
 
 mlp = MLPClassifier(early_stopping=True, verbose=True, max_iter=1)
+sc = StandardScaler(with_mean=False)
+scaler_x = sc.fit(x1_train)
+x1_train_scaled = scaler_x.transform(x1_train)
+scaler_y = sc.fit(y1_train)
+y1_train_scaled = scaler_y.transform(y1_train)
 
 parameters= {
     'hidden_layer_sizes': ((5,5), (5,10)),
@@ -42,7 +49,7 @@ parameters= {
     }
 clf = GridSearchCV(estimator = mlp, param_grid=parameters, n_jobs=-1,error_score='raise')
 
-clf.fit(x1_train, y1_train)
+clf.fit(x1_train_scaled, y1_train)
 y1_pred= clf.predict(x1_test) 
 print('accuracy: {:.2f}'.format(accuracy_score(y1_test, y1_pred)))
 print("For emotions : \n")
@@ -50,9 +57,16 @@ print(classification_report(y1_test, y1_pred,zero_division=1))
 print("Confusion Matrix: \n", confusion_matrix(y1_test, y1_pred))
 x2_train = vec.fit_transform(x2_train)
 x2_test = vec.transform(x2_test)
+y2_train = vec.transform(y2_train)
+y2_test = vec.transform(y2_test)
+scaler_x2 = sc.fit(x2_train)
+x2_train_scaled = scaler_x2.transform(x2_train)
+scaler_y2 = sc.fit(y2_train)
+y2_train_scaled = scaler_y2.transform(y2_train)
+
 mlp1 = MLPClassifier(max_iter=1)
 grid1=GridSearchCV(estimator=mlp1,param_grid=parameters,n_jobs=-1,error_score='raise')
-grid1.fit(x2_train, y2_train)
+grid1.fit(x2_train_scaled, y2_train)
 y2_pred = grid1.predict(x2_test)
 print("For sentiments : \n")
 print(classification_report(y2_test, y2_pred, zero_division=1))
