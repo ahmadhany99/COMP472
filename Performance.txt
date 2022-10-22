@@ -504,3 +504,120 @@ Confusion Matrix:
  [   12    61 10381   676]
  [    6   109  7624  4015]]
 
+Part 3.4 
+
+The overall hit rate is : 77.45063827339175 %
+The overall miss rate is : 22.54936172660825 %
+
+Part 3.8 First embedding model
+
+Using a better performing Multi-Layered Perceptron (the best model)
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:702: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (1) reached and the optimization hasn't converged yet.
+  warnings.warn(
+For emotions : 
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+                precision    recall  f1-score   support
+    admiration       0.39      0.25      0.30      2117
+     amusement       0.36      0.12      0.18      1180
+         anger       0.38      0.03      0.05      1059
+     annoyance       0.20      0.00      0.00      1687
+      approval       0.18      0.00      0.01      2217
+        caring       1.00      0.00      0.00       693
+     confusion       0.04      0.00      0.00       980
+     curiosity       0.30      0.13      0.18      1171
+        desire       0.00      0.00      0.00       479
+disappointment       0.00      0.00      0.00       898
+   disapproval       0.20      0.01      0.02      1512
+       disgust       0.00      0.00      0.00       633
+ embarrassment       0.00      0.00      0.00       272
+    excitement       0.19      0.01      0.02       592
+          fear       0.00      0.00      0.00       343
+     gratitude       0.60      0.53      0.57      1419
+         grief       0.00      0.00      0.00        53
+           joy       0.33      0.02      0.04       898
+          love       0.43      0.30      0.35      1018
+   nervousness       0.00      0.00      0.00       182
+       neutral       0.35      0.93      0.50     11035
+      optimism       0.50      0.00      0.00       915
+         pride       0.00      0.00      0.00       165
+   realization       0.00      0.00      0.00       942
+        relief       0.00      0.00      0.00       173
+       remorse       0.00      0.00      0.00       316
+       sadness       0.18      0.01      0.01       713
+      surprise       0.00      0.00      0.00       702
+      accuracy                           0.36     34364
+     macro avg       0.20      0.08      0.08     34364
+  weighted avg       0.29      0.36      0.23     34364
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:702: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (1) reached and the optimization hasn't converged yet.
+  warnings.warn(
+For sentiments : 
+              precision    recall  f1-score   support
+   ambiguous       0.47      0.18      0.26      3824
+    negative       0.50      0.38      0.43      7700
+     neutral       0.44      0.56      0.49     11191
+    positive       0.59      0.65      0.62     11649
+    accuracy                           0.51     34364
+   macro avg       0.50      0.44      0.45     34364
+weighted avg       0.51      0.51      0.49     34364
+
+Part 3.8 Second embedding model
+
+Using a better performing Multi-Layered Perceptron (the best model)
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:702: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (1) reached and the optimization hasn't converged yet.
+  warnings.warn(
+For emotions : 
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\metrics\_classification.py:1334: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+                precision    recall  f1-score   support
+    admiration       0.47      0.26      0.34      2108
+     amusement       0.37      0.07      0.12      1221
+         anger       0.39      0.04      0.07      1042
+     annoyance       0.19      0.02      0.04      1686
+      approval       0.36      0.01      0.02      2270
+        caring       0.24      0.01      0.02       715
+     confusion       0.20      0.01      0.02       989
+     curiosity       0.28      0.04      0.07      1202
+        desire       0.00      0.00      0.00       379
+disappointment       0.19      0.00      0.01       935
+   disapproval       0.21      0.02      0.03      1657
+       disgust       0.31      0.04      0.07       623
+ embarrassment       0.00      0.00      0.00       271
+    excitement       0.30      0.01      0.02       569
+          fear       0.39      0.04      0.07       360
+     gratitude       0.52      0.34      0.41      1396
+         grief       0.00      0.00      0.00        61
+           joy       0.22      0.02      0.04       798
+          love       0.51      0.26      0.35       981
+   nervousness       0.00      0.00      0.00       161
+       neutral       0.34      0.93      0.50     11027
+      optimism       0.28      0.03      0.06       915
+         pride       0.00      0.00      0.00       127
+   realization       0.00      0.00      0.00       971
+        relief       0.00      0.00      0.00       137
+       remorse       0.38      0.01      0.02       313
+       sadness       0.24      0.06      0.10       765
+      surprise       0.00      0.00      0.00       685
+      accuracy                           0.35     34364
+     macro avg       0.23      0.08      0.08     34364
+  weighted avg       0.30      0.35      0.23     34364
+C:\Users\Admin\anaconda3\envs\comp472\lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:702: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (1) reached and the optimization hasn't converged yet.
+  warnings.warn(
+For sentiments : 
+              precision    recall  f1-score   support
+   ambiguous       0.45      0.15      0.22      3824
+    negative       0.45      0.40      0.42      7712
+     neutral       0.40      0.53      0.46     10980
+    positive       0.57      0.58      0.58     11848
+    accuracy                           0.47     34364
+   macro avg       0.47      0.41      0.42     34364
+weighted avg       0.48      0.47      0.46     34364
+
