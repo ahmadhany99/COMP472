@@ -33,10 +33,10 @@ vec=CountVectorizer()
 x1_train = vec.fit_transform(x1_train)
 x1_test = vec.transform(x1_test)
 
-mlp = MLPClassifier(max_iter=1)
+mlp = MLPClassifier(early_stopping=True, verbose=True, max_iter=1)
 
 parameters= {
-    'hidden_layer_sizes': [(2,), (10,10,10)],
+    'hidden_layer_sizes': ((5,5), (5,10)),
     'activation': ['logistic', 'tanh', 'relu', 'identity'],
     'solver': ['adam', 'sgd'],
     }
@@ -50,8 +50,8 @@ print(classification_report(y1_test, y1_pred,zero_division=1))
 print("Confusion Matrix: \n", confusion_matrix(y1_test, y1_pred))
 x2_train = vec.fit_transform(x2_train)
 x2_test = vec.transform(x2_test)
-dtc1 = DecisionTreeClassifier()
-grid1=GridSearchCV(estimator=dtc1,param_grid=parameters,n_jobs=-1,error_score='raise')
+mlp1 = MLPClassifier(max_iter=1)
+grid1=GridSearchCV(estimator=mlp1,param_grid=parameters,n_jobs=-1,error_score='raise')
 grid1.fit(x2_train, y2_train)
 y2_pred = grid1.predict(x2_test)
 print("For sentiments : \n")
