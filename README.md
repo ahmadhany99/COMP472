@@ -6,7 +6,7 @@ Emotion and Sentiment Classification of Reddit Posts
 
 |      Name      |  Student ID |
 | -------------  | ------------- |
-|   Ahmad Hany   | 40068060 |
+|   Ahmad Hamdy   | 40068060 |
 |Ibrahim Tawakool| 40108389  |
 |  Mohona Mazumdar | 40129421 |
 
