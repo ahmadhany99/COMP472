@@ -1,4 +1,7 @@
 # COMP472
+
+https://github.com/ahmadhany99/COMP472
+
 Emotion and Sentiment Classification of Reddit Posts
 
 |      Name      |  Student ID |
