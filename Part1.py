@@ -18,10 +18,10 @@ for i in y:
         sentiment[i[2]] = 1
     else:
         sentiment[i[2]] += 1
-size = {"fontsize":0}
-plt.pie(emotions.values(), labels=emotions.keys(),textprops=size)
+size = {"fontsize":12}
+plt.pie(emotions.values(), labels=emotions.keys(),textprops=size, autopct='%1.0f%%')
 plt.legend(loc='center left',bbox_to_anchor=(-0.4,0.5),fontsize=8)
 plt.show()
-plt.pie(sentiment.values(),labels=sentiment.keys())
+plt.pie(sentiment.values(),labels=sentiment.keys(), autopct='%1.2f%%')
 plt.show()
 f.close()
